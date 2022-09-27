@@ -1,0 +1,69 @@
+.fondo {
+    background-image: url(https://fondosmil.com/fondo/3052.jpg);
+    background-size: cover;
+  .navbar {
+        padding: 1fr;
+
+     .logo {
+          @include tamañoLogo (100px, 100px);
+        }
+    }
+
+.opacity {
+        @extend %navbar;
+}
+
+    .saludos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin:1rem;
+        overflow: hidden;
+
+        //aplicando extend
+        
+        @extend .cuadroDeTexto;          
+    }
+    
+
+
+}
+.txt{
+      margin-top: 50px;
+      margin-left: 0px;
+      color: $colortext;
+      display:flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      height: max-content;
+      font-size: 40px;
+    }
+    .pages{
+      margin-top: 50px;
+      height:800px;
+      display: grid;
+      gap:50px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;   
+      grid-template-areas: 
+
+      "iframe1 iframe2";
+
+ }
+
+ .iframe1{
+  margin-left: 10px;
+  border-radius: 50px;
+
+  @extend %animacion;
+}
+
+ .iframe2{
+ 
+  margin-right: 10px;
+  border-radius: 50px;
+  @extend %animacion2;
+
+  }
+ 
